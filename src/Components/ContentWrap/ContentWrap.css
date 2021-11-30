@@ -1,0 +1,18 @@
+.graph_container{
+    position: relative;
+    margin-top: 60px;
+}
+
+.cancel_process1{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 20px; 
+    color: gray;
+}
+
+.button_contianer{
+    display: flex;
+    justify-content: space-between;
+}
