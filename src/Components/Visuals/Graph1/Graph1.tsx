@@ -38,7 +38,7 @@ const Graph1: React.FC<Graph1Props | any> = ({ data }) => {
         .attr("height", 200)
         .attr("transform", "translate(40,40)");
 
-      const g1arrow = group1
+      group1
         .append("g")
         .append("path")
         .attr("id", "arrowHead")

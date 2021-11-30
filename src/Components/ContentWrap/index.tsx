@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback, useState } from "react";
+import { useEffect, useCallback, useState } from "react";
 import { useReadCypher } from "use-neo4j";
 import Graph1 from "../Visuals/Graph1/Graph1";
 import { FaTimes } from "react-icons/fa";
@@ -13,7 +13,7 @@ const ContentWrap = () => {
   (B) - [R24:RELATES_TO] -> (D:BOX4),
   (C)- [R34:RELATES_TO] -> (D)
   RETURN LABELS(A),LABELS(B),TYPE(R12),LABELS(C),TYPE(R13),LABELS(D),TYPE(R24),TYPE(R34) `;
-  const svgRef = useRef();
+
   const [showGraph1, setShowGraph1] = useState(false);
   const [showGraph2, setShowGraph2] = useState(false);
   const [data, setData] = useState<any>({});
@@ -25,6 +25,7 @@ const ContentWrap = () => {
     error: error2,
     records: Query1Record2,
   } = useReadCypher(Query2);
+  console.log(error2);
 
   const FetchData = useCallback(() => {
     Query1Record?.map((res) => {
@@ -39,7 +40,7 @@ const ContentWrap = () => {
     FetchData();
   }, [FetchData]);
 
-  if (loading) return <div> Loading... </div>;
+  if (loading || loading2) return <div> Loading... </div>;
   return (
     <div className="container">
       <div className="button_contianer">
