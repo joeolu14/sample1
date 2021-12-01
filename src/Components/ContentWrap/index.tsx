@@ -29,10 +29,10 @@ const ContentWrap = () => {
 
   const FetchData = useCallback(() => {
     Query1Record?.map((res) => {
-      setData(res.toObject());
+      return setData(res.toObject());
     });
     Query1Record2?.map((res) => {
-      setData2(res.toObject());
+      return setData2(res.toObject());
     });
   }, [Query1Record, Query1Record2]);
 
