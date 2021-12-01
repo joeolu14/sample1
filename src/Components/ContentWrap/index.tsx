@@ -2,9 +2,8 @@ import { useEffect, useCallback, useState } from "react";
 import { useReadCypher } from "use-neo4j";
 import Graph1 from "../Visuals/Graph1/Graph1";
 import { FaTimes } from "react-icons/fa";
-
-import "./ContentWrap.css";
 import Graph2 from "../Visuals/Graph2/Graph2";
+import "./ContentWrap.css";
 
 const ContentWrap = () => {
   const Query1 = `match(m:Manufacturing) - [l:LEADS_TO] -> (t:Testing) return m.happened AS manufacturing, t.happened AS testing,l as relationship`;

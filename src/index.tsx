@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 import { Neo4jProvider, createDriver } from "use-neo4j";
+import "./index.css";
 
 const driver = createDriver(
   "neo4j",

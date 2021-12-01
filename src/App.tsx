@@ -1,5 +1,5 @@
-import "./App.css";
 import ContentWrap from "./Components/ContentWrap";
+import "./App.css";
 
 function App() {
   return (
