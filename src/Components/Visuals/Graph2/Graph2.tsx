@@ -62,14 +62,14 @@ const Graph2: React.FC<Graph1Props | any> = ({ data }) => {
       g1arrow
         .clone()
         .attr("id", "arrow2")
-        .attr("d", "m 300 130 h -272 m 272 0 l 0 -7 l 7 7 l -7 7 l 0 -7 z")
+        .attr("d", "m 300 130 h -292 m 292 0 l 0 -7 l 7 7 l -7 7 l 0 -7 z")
         .attr("transform", "rotate(130,157,220)");
 
       g1arrow
         .clone()
         .attr("id", "arrow3")
-        .attr("d", "m 120 65 h 282 l 0 6 l 6 -6 l -6 -6 l 0 6 Z")
-        .attr("transform", "rotate(40,57,70)");
+        .attr("d", "m 120 65 h 312 l 0 6 l 6 -6 l -6 -6 l 0 6 Z")
+        .attr("transform", "rotate(40,67,10)");
 
       g1arrow
         .clone()

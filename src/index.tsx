@@ -3,13 +3,6 @@ import "./index.css";
 import App from "./App";
 import { Neo4jProvider, createDriver } from "use-neo4j";
 
-// const driver = createDriver(
-//   "neo4j",
-//   "localhost",
-//   7687,
-//   "neo4j",
-//   "Tayoawepr14000."
-// );
 const driver = createDriver(
   "neo4j",
   process.env.REACT_APP_URI ?? "",
