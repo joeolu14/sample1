@@ -36,6 +36,7 @@ const Graph1: React.FC<Graph1Props | any> = ({ data }) => {
         .append("g")
         .attr("width", 500)
         .attr("height", 200)
+
         .attr("transform", "translate(40,40)");
 
       group1
@@ -63,7 +64,8 @@ const Graph1: React.FC<Graph1Props | any> = ({ data }) => {
         .attr("height", 60)
         .attr("y", 30)
         .attr("fill", "#f2f2f2")
-        .attr("stroke", "lightgrey");
+        .attr("stroke", "lightgrey")
+        .attr("class", "rect_group");
 
       const gtext1 = group1
         .append("text")
@@ -73,7 +75,10 @@ const Graph1: React.FC<Graph1Props | any> = ({ data }) => {
         .attr("x", 10)
         .attr("y", 50)
         .attr("fill", "black")
-        .style("font-size", "13px");
+        .style("font-size", "13px")
+        .attr("class", "text_group")
+        .on("click", () => console.log("Text1A"));
+
       const gtext1b = group1
         .append("text")
         .text(text1b)
@@ -82,7 +87,10 @@ const Graph1: React.FC<Graph1Props | any> = ({ data }) => {
         .attr("x", 10)
         .attr("y", 65)
         .attr("fill", "black")
-        .style("font-size", "13px");
+        .style("font-size", "13px")
+        .attr("class", "text_group")
+        .on("click", () => console.log("Text1B"));
+
       const gtext1c = group1
         .append("text")
         .text(text1c)
@@ -91,12 +99,29 @@ const Graph1: React.FC<Graph1Props | any> = ({ data }) => {
         .attr("x", 10)
         .attr("y", 80)
         .attr("fill", "black")
-        .style("font-size", "13px");
+        .style("font-size", "13px")
+        .attr("class", "text_group")
+        .on("click", () => console.log("Text1C"));
 
       grect1.clone().attr("x", 300);
-      gtext1.clone().attr("x", 310).text(text2a);
-      gtext1b.clone().attr("x", 310).text(text2b);
-      gtext1c.clone().attr("x", 310).text(text2c);
+      gtext1
+        .clone()
+        .attr("x", 310)
+        .text(text2a)
+        .attr("class", "text_group")
+        .on("click", () => console.log("Text2A"));
+      gtext1b
+        .clone()
+        .attr("x", 310)
+        .text(text2b)
+        .attr("class", "text_group")
+        .on("click", () => console.log("Text2B"));
+      gtext1c
+        .clone()
+        .attr("x", 310)
+        .text(text2c)
+        .attr("class", "text_group")
+        .on("click", () => console.log("Text2C"));
     }
   }, [data]);
 

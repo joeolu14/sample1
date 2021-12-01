@@ -19,13 +19,13 @@ const ContentWrap = () => {
   const [data, setData] = useState<any>({});
   const [data2, setData2] = useState<any>({});
   const { loading, error, records: Query1Record } = useReadCypher(Query1);
-  console.log(error);
+  if (error) console.log(error);
   const {
     loading: loading2,
     error: error2,
     records: Query1Record2,
   } = useReadCypher(Query2);
-  console.log(error2);
+  if (error2) console.log(error2);
 
   const FetchData = useCallback(() => {
     Query1Record?.map((res) => {
@@ -47,13 +47,13 @@ const ContentWrap = () => {
         <div className="button1">
           <button onClick={() => setShowGraph1(true)}>
             {" "}
-            Click to View Process 1
+            Click to View Process Flow 1
           </button>
         </div>
         <div className="button2">
           <button onClick={() => setShowGraph2(true)}>
             {" "}
-            Click to View Process 2
+            Click to View Process Flow 2
           </button>
         </div>
       </div>

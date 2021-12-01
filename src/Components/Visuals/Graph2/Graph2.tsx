@@ -129,6 +129,7 @@ const Graph2: React.FC<Graph1Props | any> = ({ data }) => {
         .attr("x", 300)
         .attr("fill", "#f2f2f2")
         .attr("stroke-width", "0.2%")
+        .attr("class", "rect_group")
         .attr("stroke", "lightgrey");
 
       grectBox1.clone().attr("x", 20).attr("y", 20);
@@ -145,6 +146,8 @@ const Graph2: React.FC<Graph1Props | any> = ({ data }) => {
         .attr("x", 40)
         .attr("y", 50)
         .attr("fill", "black")
+        .attr("class", "text_group")
+        .on("click", () => console.log("Text1A"))
         .style("font-size", "13px");
 
       gtext2.clone().text(node3).attr("y", 430);
